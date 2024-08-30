@@ -36,7 +36,7 @@
     var columns = document.getElementsByClassName("columnbuffer");
     for (let i = 0; i < columns.length; i++) {
         var item_column = columns[i];
-        var class_buffer = 'is-' + (Math.floor(math.random() * 13)).ToString();
+        var class_buffer = 'is-' + (Math.floor(Math.random() * 13)).ToString();
         console.log(class_buffer);
         item_column.classList.add(class_buffer); 
         item_column.classList.remove('columnbuffer'); 
