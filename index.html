@@ -13,26 +13,16 @@
 
 <section class="hero is-fullheight logobackground">
     <div class="columns is-gapless">
-		<div class="column is-2">
-		</div>
 
-        <div class="column is-8">
-            <div class="content">
-                <div class="logo">
-    				<img src="img/comingsoon.png">
-    			</div>
 
-                <div class="columns is-mobile">
-                    <div class="column">
-                        <a class="button buttonstyle" href="/portfolio">Portfolio</a><br>
-                    </div>
-                    <div class="column">
-                        <a class="button buttonstyle" href="/">Find Me</a>
-                    </div>
-                </div>
-            </div>
+
+        <div class="column columnbuffer">
+            <iframe frameborder="0" src="https://itch.io/embed/2886628?border_width=0&amp;bg_color=000000&amp;link_color=0048FF" width="206" height="165"><a href="https://jayden-holliss.itch.io/cat-carnival">Cat Carnival by Jayden Holliss, KHUHSI33234234, Phatchop, miloeck</a></iframe>
         </div>
-    </div>
+        <div class="column columnbuffer">
+            <iframe frameborder="0" src="https://itch.io/embed/1325702?bg_color=000000&amp;link_color=0048FF" width="208" height="167"><a href="https://mister-spaceman.itch.io/guns-girlz-operation-gekkou-retro">Guns GirlZ: Operation Gekkou - Retro by Mister Spaceman, JKCrafted</a></iframe>
+        </div>
+
 
 	<div class="columns is-gapless">
 		<div class="column">
@@ -42,6 +32,18 @@
 		</div>
 	</div>
 </section>
+
+<script>
+    var columns = document.getElementsByClassName("columnbuffer");
+    for (let i = 0; i < columns.length; i++) {
+        var item_column = columns[i];
+        var class_buffer = 'is-' + (Math.floor(math.random() * 13)).ToString();
+        console.log(class_buffer);
+        item_column.classList.add(class_buffer); 
+        item_column.classList.remove('columnbuffer'); 
+
+    }
+</script>
 
 </body>
 </html>
