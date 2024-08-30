@@ -13,34 +13,34 @@
 
 <section class="hero is-fullheight logobackground">
     <div class="columns is-gapless">
-		<div class="column is-2">
-		</div>
 
-        <div class="column columnbuffer">
+
+        <div class="columnbuffer">
             <iframe frameborder="0" src="https://itch.io/embed/2886628?border_width=0&amp;bg_color=000000&amp;link_color=0048FF" width="206" height="165"><a href="https://jayden-holliss.itch.io/cat-carnival">Cat Carnival by Jayden Holliss, KHUHSI33234234, Phatchop, miloeck</a></iframe>
         </div>
-        <div class="column columnbuffer">
-            <iframe frameborder="0" src="https://itch.io/embed/1325702?bg_color=000000&amp;link_color=0048FF" width="208" height="167"><a href="https://mister-spaceman.itch.io/guns-girlz-operation-gekkou-retro">Guns GirlZ: Operation Gekkou - Retro by Mister Spaceman, JKCrafted</a></iframe>
+        <div class="columnbuffer">
+            <iframe frameborder="0" src="https://itch.io/embed/1325702?border_width=0&amp;bg_color=000000&amp;link_color=0048FF" width="206" height="165"><a href="https://mister-spaceman.itch.io/guns-girlz-operation-gekkou-retro">Guns GirlZ: Operation Gekkou - Retro by Mister Spaceman, JKCrafted</a></iframe>
         </div>
 
-	<div class="columns is-gapless">
-		<div class="column">
-			<div class="footer">
-				<span class="linkedin"><a href="https://au.linkedin.com/in/jayden-holliss-42aa81314">Linkedin Profile</a></span>
-			</div>
-		</div>
-	</div>
+    <div class="columns is-gapless">
+        <div class="column">
+            <div class="footer">
+                <span class="linkedin"><a href="https://au.linkedin.com/in/jayden-holliss-42aa81314">Linkedin Profile</a></span>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script>
     var columns = document.getElementsByClassName("columnbuffer");
     for (let i = 0; i < columns.length; i++) {
         var item_column = columns[i];
-        var class_buffer = 'is-' + (Math.floor(Math.random() * 13)).toString();
-        console.log(class_buffer);
-        item_column.classList.add(class_buffer); 
-        item_column.classList.remove('columnbuffer'); 
-
+        let randY = Math.floor((Math.random() * height) + 1);
+        let randX = Math.floor((Math.random() * width) + 1);
+        const height = document.documentElement.clientHeight;
+        const width = document.documentElement.clientWidth;
+        item_column.style.top = randY + "px";
+        item_column.style.right = randX + "px";
     }
 </script>
 
