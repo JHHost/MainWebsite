@@ -25,7 +25,8 @@
     <div class="columns is-gapless">
         <div class="column">
             <div class="footer">
-                <span class="linkedin"><a href="https://au.linkedin.com/in/jayden-holliss-42aa81314">Linkedin Profile</a></span>
+                <span class="footerlinks"><a href="https://jayden-holliss.itch.io/">Itch.io Profile</a></span>
+				<span class="footerlinks"><a href="https://au.linkedin.com/in/jayden-holliss-42aa81314">Linkedin Profile</a></span>
             </div>
         </div>
     </div>
@@ -33,12 +34,13 @@
 
 <script>
     var columns = document.getElementsByClassName("columnbuffer");
+    console.log(columns.length);
     for (let i = 0; i < columns.length; i++) {
         var item_column = columns[i];
-        let randY = Math.floor((Math.random() * height) + 1);
-        let randX = Math.floor((Math.random() * width) + 1);
         const height = document.documentElement.clientHeight;
         const width = document.documentElement.clientWidth;
+        let randY = Math.floor((Math.random() * height) + 1);
+        let randX = Math.floor((Math.random() * width) + 1);
         item_column.style.top = randY + "px";
         item_column.style.right = randX + "px";
     }
