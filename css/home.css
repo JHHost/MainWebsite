@@ -16,6 +16,11 @@ html {
 			rgba(0, 0, 0, 0) 60%,
 			rgba(0, 0, 0, 1)
 		),
+		linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0) 60%,
+			rgba(0, 0, 0, 1)
+		),
 		url("../img/background.png");
 	background-repeat: no-repeat;
 	background-position: top center;
