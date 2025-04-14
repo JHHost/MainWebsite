@@ -435,10 +435,20 @@ html {
     text-size-adjust: 100%
 }
 
+footer {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    text-align: right;
+    justify-content: space-evenly;
+    align-items: normal;
+}
+
 article,
 aside,
 figure,
-footer,
 header,
 hgroup,
 section {

@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <script src="/footer.js"></script>
 </head>
 <body>
 
@@ -15,39 +16,17 @@
     <div class="columns is-gapless">
 
 
-        <div class="columnbuffer">
+        <div class="gamelist">
             <iframe frameborder="0" src="https://itch.io/embed/2886628?border_width=0&amp;bg_color=000000&amp;link_color=0048FF" width="206" height="165"><a href="https://jayden-holliss.itch.io/cat-carnival">Cat Carnival by Jayden Holliss, KHUHSI33234234, Phatchop, miloeck</a></iframe>
-        </div>
-        <div class="columnbuffer">
             <iframe frameborder="0" src="https://itch.io/embed/1325702?border_width=0&amp;bg_color=000000&amp;link_color=0048FF" width="206" height="165"><a href="https://mister-spaceman.itch.io/guns-girlz-operation-gekkou-retro">Guns GirlZ: Operation Gekkou - Retro by Mister Spaceman, JKCrafted</a></iframe>
-        </div>
-        <div class="columnbuffer">
             <iframe frameborder="0" src="https://itch.io/embed/3164597?border_width=0&amp;bg_color=000000&amp;link_color=0048FF" width="206" height="165"><a href="https://jayden-holliss.itch.io/toy-survival">Toy Survival by Jayden Holliss, ThomasJenner</a></iframe>
         </div>
-
-    <div class="columns is-gapless">
-        <div class="column">
-            <div class="footer">
-                <span class="footerlinks"><a href="https://jayden-holliss.itch.io/">Itch.io Profile</a></span>
-				<span class="footerlinks"><a href="https://au.linkedin.com/in/jayden-holliss-42aa81314">Linkedin Profile</a></span>
-            </div>
-        </div>
     </div>
+
+    <footer>
+    </footer>
 </section>
 
-<script>
-    var columns = document.getElementsByClassName("columnbuffer");
-    console.log(columns.length);
-    for (let i = 0; i < columns.length; i++) {
-        var item_column = columns[i];
-        const height = document.documentElement.clientHeight;
-        const width = document.documentElement.clientWidth;
-        let randY = Math.floor((Math.random() * height) + 1);
-        let randX = Math.floor((Math.random() * width) + 1);
-        item_column.style.top = randY + "px";
-        item_column.style.right = randX + "px";
-    }
-</script>
 
 </body>
 </html>
