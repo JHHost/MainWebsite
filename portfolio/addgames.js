@@ -47,10 +47,10 @@ var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Ima
 
 
 
-var gamesHolder = document.getElementsByClassName("gamesHolder")[0];
-SetGames();
+var gamesHolderBuffer = document.getElementsByClassName("gamesHolder")[0];
+SetGames(gamesHolderBuffer);
 
-function SetGames() {
+function SetGames(gamesHolder) {
     for (let i = 0; i < Object.keys(games).length; i++) {
         let content = gamesHolder.innerHTML;
         // /console.log(content);
