@@ -360,7 +360,8 @@ h2
 h3
 {
     font-size: 150%;
-    font-weight: 450
+    font-weight: 450;
+    color: aqua
 }
 h4
 {
@@ -468,7 +469,7 @@ body {
 }
 
 a {
-    color: #485fc7;
+    color: #ff00d2;
     cursor: pointer;
     text-decoration: none
 }
@@ -478,7 +479,7 @@ a strong {
 }
 
 a:hover {
-    color: #363636
+    color: rgb(96, 136, 209)
 }
 
 code {
