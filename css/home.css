@@ -27,7 +27,18 @@ html {
 	background-size: cover;
 }
 
-.content {
+.textcontent {
+    background-color: rgb(154 146 225 / 30%);
+	border-radius: 3%;
+	color: white;
+	display: block;
+	overflow: hidden;
+	margin: 2%;
+	padding: 2%;
+	width: 96%;
+}
+
+.basecontent {
     background-color: rgba(200, 200, 200, 0.3);
 	border-radius: 8px;
 	color: #000;
