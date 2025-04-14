@@ -24,10 +24,10 @@ var games = {
         "image": ""
     },
     4: {
-        "name": "Super Fast Racing",
-        "type": "itch",
-        "link": "https://jayden-holliss.itch.io/super-fast-racing",
-        "image": "https://img.itch.zone/aW1nLzE5OTU5MTc3LnBuZw==/original/MrHtTV.png"
+        "name": "Bubble Wubble",
+        "type": "ggj",
+        "link": "https://globalgamejam.org/games/2025/bubble-wubble-2",
+        "image": ""
     },
     5: {
         "name": "Audio Waves",
@@ -36,6 +36,12 @@ var games = {
         "image": ""
     },
     6: {
+        "name": "Super Fast Racing",
+        "type": "itch",
+        "link": "https://jayden-holliss.itch.io/super-fast-racing",
+        "image": "https://img.itch.zone/aW1nLzE5OTU5MTc3LnBuZw==/original/MrHtTV.png"
+    },
+    7: {
         "name": "Endless Jumper",
         "type": "google",
         "link": "https://play.google.com/store/apps/details?id=com.GoodEnoughToBeTheBest.EndlessJumper",
@@ -45,51 +51,28 @@ var games = {
 var typesCompleted = 0;
 var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
 
-setTimeout(MainGames, 200);
+setTimeout(FetchGames.bind(this, 'gamesHolder', 'any'));
+setTimeout(FetchGames.bind(this, 'googleGamesHolder', 'google'));
+setTimeout(FetchGames.bind(this, 'itchGamesHolder', 'itch'));
+setTimeout(FetchGames.bind(this, 'ggjGamesHolder', 'ggj'));
 
-function MainGames() {
-    let gamesHolder = document.getElementsByClassName("gamesHolder")[0];
+function FetchGames(inputclass, type) {
+    let gamesHolder = document.getElementsByClassName(inputclass)[0];
     if (gamesHolder != undefined) {
-        SetGames(gamesHolder, 'any');
+        SetGames(gamesHolder, type);
     }
     else {
         clearTimeout();
-        setTimeout(MainGames, 200);
-    }
-}
-setTimeout(GoogleGames, 200);
-
-function GoogleGames() {
-    let gamesHolder = document.getElementsByClassName("googleGamesHolder")[0];
-    if (gamesHolder != undefined) {
-        SetGames(gamesHolder, 'google');
-    }
-    else {
-        clearTimeout();
-        setTimeout(GoogleGames, 200);
+        setTimeout(FetchGames.bind(this, inputclass, type), 200);
     }
 }
 
-setTimeout(ItchGames, 200);
-
-function ItchGames() {
-    let gamesHolder = document.getElementsByClassName("itchGamesHolder")[0];
-    if (gamesHolder != undefined) {
-        SetGames(gamesHolder, 'itch');
-    }
-    else {
-        clearTimeout();
-        setTimeout(ItchGames, 200);
-    }
-}
-
- 
 
 
 function SetGames(gamesHolder, type) {
     for (let i = 0; i < Object.keys(games).length; i++) {
         let content = (gamesHolder.innerHTML);
-        // /console.log(content);
+        //console.log(content);
         let gameLink = games[i].link;
         if (gameLink != "") {
             let gameImage = games[i].image;
@@ -105,11 +88,15 @@ function SetGames(gamesHolder, type) {
                     break;
                 case "google":
                     gameColour = "#A4C639";
-                    gameType = "Google Play Store"
+                    gameType = "Google Play Store";
                     break;
                 case "itch":
                     gameColour = "#FA5C5C";
-                    gameType = "itch.io"
+                    gameType = "itch.io";
+                    break;
+                case "ggj":
+                    gameColour = "#1FA9E1";
+                    gameType = "Global Game Jam";
                     break;
                 default:
                     gameColour = "#870051";
@@ -118,7 +105,7 @@ function SetGames(gamesHolder, type) {
 
             }
             if (type == 'any' || games[i].type == type) {
-                content += '<div class="gamecontent" style="padding-left: 5px;padding-right: 5px;"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"><div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + ';max-width: 180px;text-wrap: auto;">Download on ' + gameType + '</a></div></div></div>'
+                content += '<div class="gamecontent" style="padding-left: 5px;padding-right: 5px;"> <div class="thumb_wrapper"><h3 style="padding-top:5px;padding-bottom:5px;max-width:200px;font-size:1vw;height: 2vw;max-height: 2vw;min-height: 1vw;">'+games[i].name+'</h3><br><a href="'+gameLink+'"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a><div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + ';max-width: 180px;text-wrap: auto;">Download on ' + gameType + '</a></div></div></div>'
             }
 
 
@@ -141,7 +128,7 @@ function SetGames(gamesHolder, type) {
 AddCollapse();
 
 function AddCollapse() {
-    if (typesCompleted >= 3) {
+    if (typesCompleted >= 4) {
         SetCollapse();
     }
     else {
