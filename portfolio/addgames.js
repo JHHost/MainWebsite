@@ -48,11 +48,11 @@ var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Ima
 
 
 var gamesHolder = document.getElementsByClassName("gamesHolder")[0];
-setTimeout(SetGames, 200);
+setTimeout(SetGames, 400);
 
 function SetGames() {
     for (let i = 0; i < Object.keys(games).length; i++) {
-        let content = gamesHolder.innerHTML;
+        let content = (gamesHolder.innerHTML || document.getElementsByClassName("gamesHolder")[0].innerHTML);
         // /console.log(content);
         let gameLink = games[i].link;
         if (gameLink != "") {
