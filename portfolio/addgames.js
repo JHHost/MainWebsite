@@ -42,7 +42,7 @@ var games = {
         "image": "https://play-lh.googleusercontent.com/5aX2DldZU5VwAPz7xhwh0XBzZQVl3TRGnpYLD4nJZ6d2dXb6hULa8r8b5AgeLPzvwfnI=w240-h480-rw"
     },
 };
-
+var typesCompleted = 0;
 var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
 
 setTimeout(MainGames, 200);
@@ -129,9 +129,36 @@ function SetGames(gamesHolder, type) {
     if (content != undefined) {
         gamesHolder.innerHTML = content;
     }
+    typesCompleted++;
     
     
 
 
 
 }
+
+function AddCollapse() {
+    if (typesCompleted >= 3) {
+        SetCollapse();
+    }
+    else {
+        clearTimeout();
+        setTimeout(SetCollapse, 200);
+    }
+}
+
+function SetCollapse() {
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+} }
