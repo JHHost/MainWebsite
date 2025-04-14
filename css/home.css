@@ -22,9 +22,9 @@ html {
 			rgba(0, 0, 0, 1)
 		),
 		url("../img/background.png");
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	background-position: top center;
-	background-size: cover;
+	background-size: auto;
 }
 
 .textcontent {

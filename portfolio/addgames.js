@@ -137,6 +137,9 @@ function SetGames(gamesHolder, type) {
 
 }
 
+
+AddCollapse();
+
 function AddCollapse() {
     if (typesCompleted >= 3) {
         SetCollapse();
@@ -152,8 +155,7 @@ var coll = document.getElementsByClassName("collapsible");
 
 for (let i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
-    if (i != 0) {this.classList.toggle("active");}
-    
+    this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
@@ -161,4 +163,8 @@ for (let i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
-} }
+}
+coll[0].click();
+
+
+}
