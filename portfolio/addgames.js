@@ -83,7 +83,7 @@ function SetGames() {
             }
 
 
-            content += '<div class="widget_container"> <div class="dark game_widget_page page_widget base_widget"> <div class="shroud"></div> <div class="first_page has_cover"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-width:200px"></div><div class="narrow_cta"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + '">Download on ' + gameType + '</a></div></div></div></div>'
+            content += '<div class="gamecontent"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-width:200px"></div><div class="narrow_cta"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + '">Download on ' + gameType + '</a></div></div>'
         }
     if (content != undefined) {
         gamesHolder.innerHTML = content;
