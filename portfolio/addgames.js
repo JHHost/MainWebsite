@@ -45,10 +45,21 @@ var games = {
 
 var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
 
+setTimeout(StartSetup, 200);
 
+function StartSetup() {
+    gamesHolder = document.getElementsByClassName("gamesHolder")[0];
+    if (gamesHolder != undefined) {
+        SetGames();
+    }
+    else {
+        clearTimeout();
+        setTimeout(StartSetup, 200);
+    }
+}
 
-var gamesHolder = document.getElementsByClassName("gamesHolder")[0];
-setTimeout(SetGames, 400);
+ 
+
 
 function SetGames() {
     for (let i = 0; i < Object.keys(games).length; i++) {
@@ -89,7 +100,7 @@ function SetGames() {
         gamesHolder.innerHTML = content;
     }
     }
-    clearTimeout();
+    
     
 
 
