@@ -29,7 +29,7 @@ html {
 
 .textcontent {
     background-color: rgb(154 146 225 / 30%);
-	border-radius: 3%;
+	border-radius: 33px 33px 33px 33px;
 	color: white;
 	display: block;
 	overflow: hidden;
