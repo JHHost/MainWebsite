@@ -83,7 +83,7 @@ function SetGames(gamesHolder) {
             }
 
 
-            content += '<div class="gamecontent"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-width:200px"></div><div class="narrow_cta"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + '">Download on ' + gameType + '</a></div></div>'
+            content += '<div class="gamecontent" style="padding-left: 5px;padding-right: 5px;"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></div><div class="narrow_cta"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + '">Download on ' + gameType + '</a></div></div>'
         }
     if (content != undefined) {
         gamesHolder.innerHTML = content;
