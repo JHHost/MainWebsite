@@ -45,25 +45,50 @@ var games = {
 
 var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
 
-setTimeout(StartSetup, 200);
+setTimeout(MainGames, 200);
 
-function StartSetup() {
-    gamesHolder = document.getElementsByClassName("gamesHolder")[0];
+function MainGames() {
+    let gamesHolder = document.getElementsByClassName("gamesHolder")[0];
     if (gamesHolder != undefined) {
-        SetGames();
+        SetGames(gamesHolder, 'any');
     }
     else {
         clearTimeout();
-        setTimeout(StartSetup, 200);
+        setTimeout(MainGames, 200);
+    }
+}
+setTimeout(GoogleGames, 200);
+
+function GoogleGames() {
+    let gamesHolder = document.getElementsByClassName("googleGamesHolder")[0];
+    if (gamesHolder != undefined) {
+        SetGames(gamesHolder, 'google');
+    }
+    else {
+        clearTimeout();
+        setTimeout(GoogleGames, 200);
+    }
+}
+
+setTimeout(ItchGames, 200);
+
+function ItchGames() {
+    let gamesHolder = document.getElementsByClassName("itchGamesHolder")[0];
+    if (gamesHolder != undefined) {
+        SetGames(gamesHolder, 'itch');
+    }
+    else {
+        clearTimeout();
+        setTimeout(ItchGames, 200);
     }
 }
 
  
 
 
-function SetGames() {
+function SetGames(gamesHolder, type) {
     for (let i = 0; i < Object.keys(games).length; i++) {
-        let content = (gamesHolder.innerHTML || document.getElementsByClassName("gamesHolder")[0].innerHTML);
+        let content = (gamesHolder.innerHTML);
         // /console.log(content);
         let gameLink = games[i].link;
         if (gameLink != "") {
@@ -92,13 +117,17 @@ function SetGames() {
                     break;
 
             }
+            if (type == 'any' || games[i].type == type) {
+                content += '<div class="gamecontent" style="padding-left: 5px;padding-right: 5px;"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"><div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + ';max-width: 180px;text-wrap: auto;">Download on ' + gameType + '</a></div></div></div>'
+            }
 
 
-            content += '<div class="gamecontent" style="padding-left: 5px;padding-right: 5px;"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"><div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + ';max-width: 180px;text-wrap: auto;">Download on ' + gameType + '</a></div></div></div>'
+            
         }
+
+    }
     if (content != undefined) {
         gamesHolder.innerHTML = content;
-    }
     }
     
     
