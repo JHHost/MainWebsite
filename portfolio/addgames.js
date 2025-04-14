@@ -47,10 +47,10 @@ var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Ima
 
 
 
-var gamesHolderBuffer = document.getElementsByClassName("gamesHolder")[0];
-SetGames(gamesHolderBuffer);
+var gamesHolder = document.getElementsByClassName("gamesHolder")[0];
+setTimeout(SetGames, 200);
 
-function SetGames(gamesHolder) {
+function SetGames() {
     for (let i = 0; i < Object.keys(games).length; i++) {
         let content = gamesHolder.innerHTML;
         // /console.log(content);
@@ -83,12 +83,13 @@ function SetGames(gamesHolder) {
             }
 
 
-            content += '<div class="gamecontent" style="padding-left: 5px;padding-right: 5px;"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></div><div class="narrow_cta"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + '">Download on ' + gameType + '</a></div></div>'
+            content += '<div class="gamecontent" style="padding-left: 5px;padding-right: 5px;"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"><div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + ';max-width: 180px;text-wrap: auto;">Download on ' + gameType + '</a></div></div></div>'
         }
     if (content != undefined) {
         gamesHolder.innerHTML = content;
     }
     }
+    clearTimeout();
     
 
 
