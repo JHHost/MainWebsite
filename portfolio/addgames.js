@@ -124,10 +124,10 @@ function SetGames(gamesHolder, type) {
 
             
         }
+        if (content != undefined) {
+            gamesHolder.innerHTML = content;
+        }
 
-    }
-    if (content != undefined) {
-        gamesHolder.innerHTML = content;
     }
     typesCompleted++;
     
