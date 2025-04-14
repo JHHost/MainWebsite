@@ -47,17 +47,18 @@ var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Ima
 
 
 
-var gamesHolder = document.getElementsByClassName("gamesHolder");
+var gamesHolder = document.getElementsByClassName("gamesHolder")[0];
 SetGames();
 
 function SetGames() {
-    for (let i = 0; i < games.length; i++) {
-        let content = gamesHolder.innerHTML.toString();
+    for (let i = 0; i < Object.keys(games).length; i++) {
+        let content = gamesHolder.innerHTML;
+        // /console.log(content);
         let gameLink = games[i].link;
         if (gameLink != "") {
-            let gameImage = (games[i].image);
-            if (gamesImage == "") {
-                gamesImage = undefinedImage;
+            let gameImage = games[i].image;
+            if (gameImage == "") {
+                gameImage = undefinedImage;
             }
             let gameColour = '#870051';
             let gameType = '';
@@ -82,9 +83,13 @@ function SetGames() {
             }
 
 
-            content += '<div class="widget_container"> <div class="dark game_widget_page page_widget base_widget"> <div class="shroud"></div> <div class="first_page has_cover"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x"></div><div class="narrow_cta"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + '">Download on' + gameType + '</a></div></div></div></div>'
+            content += '<div class="widget_container"> <div class="dark game_widget_page page_widget base_widget"> <div class="shroud"></div> <div class="first_page has_cover"> <div class="thumb_wrapper"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-width:200px"></div><div class="narrow_cta"><a href="' + gameLink + '" class="button" target="_blank" style="background-color:' + gameColour + '">Download on ' + gameType + '</a></div></div></div></div>'
         }
+    if (content != undefined) {
+        gamesHolder.innerHTML = content;
     }
+    }
+    
 
 
 
