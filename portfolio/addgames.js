@@ -45,7 +45,7 @@ var games = {
         "name": "Endless Jumper",
         "type": "google",
         "link": "https://play.google.com/store/apps/details?id=com.GoodEnoughToBeTheBest.EndlessJumper",
-        "image": "https://play-lh.googleusercontent.com/5aX2DldZU5VwAPz7xhwh0XBzZQVl3TRGnpYLD4nJZ6d2dXb6hULa8r8b5AgeLPzvwfnI=w240-h480-rw"
+        "image": "https://play-lh.googleusercontent.com/5Y4l6Dj4jI3iTYOPPauvB12LG__GfP4lnTa1nhpzjGQSpT9ajqrZLxhOMUQyVmN39Rc3=w240-h480-rw"
     },
 };
 var typesCompleted = 0;
