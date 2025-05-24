@@ -102,6 +102,13 @@ a:hover {
     color: #dd9ed0;
 }
 
+.thumb_wrapper {
+	padding-left: 5px;
+	padding-right: 5px;
+	background: url("../img/boarder.png");
+  	background-size: 100% 100%;
+}
+
 
 .button:active,
 .button:focus,
@@ -285,6 +292,11 @@ h6 {
 	margin-right: 34px;
 }
 
+.footerspacer {
+	padding: 8px;
+	max-height: 20vh;
+}
+
 .header {
     background-color: rgba(11, 11, 11, 0.6);
 	color: #ec0909;
@@ -303,6 +315,12 @@ h6 {
 	color:rgb(0, 60, 255);
 	font-size: larger;
 }
+
+.headerspacer {
+	padding: 8px;
+	max-height: 24vh;
+}
+
 
 .checkborder {
 	border: 1px solid #f00;
