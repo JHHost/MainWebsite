@@ -275,10 +275,12 @@ h6 {
 	padding: 8px;
 	text-align: right;
 	word-wrap: break-word;
-	position: absolute;
+	position: fixed;
     bottom: 0px;
     right: 0px;
     width: 100%;
+	height: 4vh;
+	max-height: 20vh;
 }
 .footerlinks {
 	margin-right: 34px;
