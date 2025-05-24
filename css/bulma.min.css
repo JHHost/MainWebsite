@@ -1,75 +1,7 @@
 /*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */
-.button,
-.file-cta,
-.file-name,
-.input,
-.pagination-ellipsis,
-.pagination-link,
-.pagination-next,
-.pagination-previous,
-.select select,
-.textarea {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    align-items: center;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    box-shadow: none;
-    display: inline-flex;
-    font-size: 1rem;
-    height: 2.5em;
-    justify-content: flex-start;
-    line-height: 1.5;
-    padding-bottom: calc(.5em - 1px);
-    padding-left: calc(.75em - 1px);
-    padding-right: calc(.75em - 1px);
-    padding-top: calc(.5em - 1px);
-    position: relative;
-    vertical-align: top
-}
 
-.button:active,
-.button:focus,
-.file-cta:active,
-.file-cta:focus,
-.file-name:active,
-.file-name:focus,
-.input:active,
-.input:focus,
-.is-active.button,
-.is-active.file-cta,
-.is-active.file-name,
-.is-active.input,
-.is-active.pagination-ellipsis,
-.is-active.pagination-link,
-.is-active.pagination-next,
-.is-active.pagination-previous,
-.is-active.textarea,
-.is-focused.button,
-.is-focused.file-cta,
-.is-focused.file-name,
-.is-focused.input,
-.is-focused.pagination-ellipsis,
-.is-focused.pagination-link,
-.is-focused.pagination-next,
-.is-focused.pagination-previous,
-.is-focused.textarea,
-.pagination-ellipsis:active,
-.pagination-ellipsis:focus,
-.pagination-link:active,
-.pagination-link:focus,
-.pagination-next:active,
-.pagination-next:focus,
-.pagination-previous:active,
-.pagination-previous:focus,
-.select select.is-active,
-.select select.is-focused,
-.select select:active,
-.select select:focus,
-.textarea:active,
-.textarea:focus {
-    outline: 0
-}
+
+
 
 .button[disabled],
 .file-cta[disabled],
@@ -317,67 +249,7 @@ fieldset[disabled] .textarea {
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-blockquote,
-body,
-dd,
-dl,
-dt,
-fieldset,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-html,
-iframe,
-legend,
-li,
-ol,
-p,
-pre,
-textarea,
-ul {
-    margin: 0;
-    padding: 0
-}
 
-
-h1
-{
-    font-size: 200%;
-    font-weight: 600;
-    color: crimson
-}
-h2
-{
-    font-size: 175%;
-    font-weight: 500;
-    color: greenyellow;
-}
-h3
-{
-    font-size: 150%;
-    font-weight: 450;
-    color: aqua
-}
-h4
-{
-    font-size: 125%;
-    font-weight: 400
-}
-
-ul {
-    list-style: none
-}
-
-h5,
-h6 {
-    font-size: 100%;
-    font-weight: 400
-}
 
 button,
 input,
@@ -386,21 +258,10 @@ textarea {
     margin: 0
 }
 
-html {
-    box-sizing: border-box
-}
 
-*,
-::after,
-::before {
-    box-sizing: inherit
-}
 
-img,
-video {
-    height: auto;
-    max-width: 100%
-}
+
+
 
 iframe {
     border: 0
@@ -411,27 +272,8 @@ table {
     border-spacing: 0
 }
 
-.collapsible {
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    background-color: #00000000;
-}
 
-.collapsible:hover {
-    background-color: #00000036;
-}
 
-.content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
 
 td,
 th {
@@ -444,6 +286,7 @@ th:not([align]) {
 }
 
 html {
+    box-sizing: border-box;
     background-color: #fff;
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
@@ -454,7 +297,7 @@ html {
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
-    text-size-adjust: 100%
+    text-size-adjust: 100%;
 }
 
 footer {
@@ -477,15 +320,6 @@ section {
     display: block
 }
 
-body,
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
-}
-
 code,
 pre {
     -moz-osx-font-smoothing: auto;
@@ -493,18 +327,9 @@ pre {
     font-family: monospace
 }
 
-body {
-    color: #4a4a4a;
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.5
-}
 
-a {
-    color: #ff00d2;
-    cursor: pointer;
-    text-decoration: none
-}
+
+
 
 a strong {
     color: currentColor
@@ -628,20 +453,7 @@ a.box:active {
     box-shadow: inset 0 1px 2px rgba(10, 10, 10, .2), 0 0 0 1px #485fc7
 }
 
-.button {
-    background-color: #fff;
-    border-color: #dbdbdb;
-    border-width: 1px;
-    color: #363636;
-    cursor: pointer;
-    justify-content: center;
-    padding-bottom: calc(.5em - 1px);
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: calc(.5em - 1px);
-    text-align: center;
-    white-space: nowrap
-}
+
 
 .button strong {
     color: inherit
@@ -9333,11 +9145,7 @@ print {
     }
 }
 
-.columns {
-    margin-left: -.75rem;
-    margin-right: -.75rem;
-    margin-top: -.75rem
-}
+
 
 .columns:last-child {
     margin-bottom: -.75rem
