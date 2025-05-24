@@ -151,7 +151,7 @@ for (let i = 0; i < coll.length; i++) {
     } 
   });
 }
-coll[0].click();
+setTimeout(function(){ coll[0].click(); }, 300);
 
 
 }
