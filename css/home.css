@@ -211,6 +211,10 @@ h6 {
     white-space: nowrap
 }
 
+.button:hover {
+	color:aqua;
+}
+
 .content {
     padding: 0 18px;
     max-height: 0;
@@ -271,10 +275,12 @@ h6 {
 	padding: 8px;
 	text-align: right;
 	word-wrap: break-word;
+	position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
 }
-
-.footer .footerlinks {
-	color: #357;
+.footerlinks {
 	margin-right: 34px;
 }
 
