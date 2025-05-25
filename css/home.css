@@ -75,7 +75,7 @@ body {
 			rgba(0, 0, 0, 1)
 		),
 		url("../img/background.png");
-	background-repeat: repeat-y;
+	background-repeat: repeat;
 	background-position: top right;
 	background-size: auto;
 	align-items: stretch;
