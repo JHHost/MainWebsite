@@ -47,6 +47,12 @@ var games = {
         "link": "https://play.google.com/store/apps/details?id=com.GoodEnoughToBeTheBest.EndlessJumper",
         "image": "https://play-lh.googleusercontent.com/5Y4l6Dj4jI3iTYOPPauvB12LG__GfP4lnTa1nhpzjGQSpT9ajqrZLxhOMUQyVmN39Rc3=w240-h480-rw"
     },
+    8: {
+        "name": "Seeds of Klotho",
+        "type": "itch",
+        "link": "https://teamhyposphere.itch.io/seeds-of-klotho",
+        "image": "https://img.itch.zone/aW1nLzIxNTc2NTY0LnBuZw==/315x250%23c/Dr4%2BVn.png"
+    },
 };
 var typesCompleted = 0;
 var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
