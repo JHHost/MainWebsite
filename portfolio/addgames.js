@@ -157,7 +157,7 @@ for (let i = 0; i < coll.length; i++) {
     } 
   });
 }
-setTimeout(function(){ coll[0].click(); }, 300);
+setTimeout(function(){ coll[0].click(); }, 400);
 
 
 }
