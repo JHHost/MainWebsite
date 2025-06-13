@@ -3,7 +3,7 @@ var games = {
         "name": "Guns GirlZ: Operation Gekkou - Retro",
         "type": "itch",
         "link": "https://hoyostans.itch.io/guns-girlz-operation-gekkou-retro",
-        "image": "https://img.itch.zone/aW1nLzc3MDkxNjYucG5n/315x250%23c/crs5zF.png"
+        "image": "https://img.itch.zone/aW1nLzIxNjYxOTUwLnBuZw==/315x250%23c/AsGUtZ.png"
     },
     1: {
         "name": "Cat Carnival",
