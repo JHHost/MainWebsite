@@ -2,7 +2,7 @@ var games = {
     0: {
         "name": "Guns GirlZ: Operation Gekkou - Retro",
         "type": "itch",
-        "link": "https://mister-spaceman.itch.io/guns-girlz-operation-gekkou-retro",
+        "link": "https://hoyostans.itch.io/guns-girlz-operation-gekkou-retro",
         "image": "https://img.itch.zone/aW1nLzc3MDkxNjYucG5n/315x250%23c/crs5zF.png"
     },
     1: {
