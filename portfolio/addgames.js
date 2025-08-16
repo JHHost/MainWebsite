@@ -32,7 +32,7 @@ var games = {
     5: {
         "name": "Audio Waves",
         "type": ["itch"],
-        "link": [""],
+        "link": [],
         "image": ""
     },
     6: {
@@ -119,45 +119,48 @@ function SetGames(gamesHolder, type) {
         let content = (gamesHolder.innerHTML);
         //console.log(content);
         let gameLink = games[i].link;
-        if (gameLink != [""]) {
+        console.log(gameLink);
+        if (gameLink.length > 0) {
+            console.log(gameLink);
             let gameImage = games[i].image;
             if (gameImage == "") {
                 gameImage = undefinedImage;
 
-                if (type == 'any' || games[i].type.includes(type)) {
-                    let itemTypes = Object.keys(games[i].type);
-                    let contentTmp = "";
-                    contentTmp += '<div class="gamecontent"> <div class="thumb_wrapper"><h3 style="padding-top:5px;padding-bottom:5px;max-width:200px;font-size:1em;height: 2em;max-height: 2em;min-height: 1em;">' + games[i].name + '</h3><br>';
-                    if (itemTypes.length == 1) {
-                        contentTmp += '<a href="' + gameLink[0] + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
-                    }
-                    else {
-                        contentTmp += '<img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;">';
-                    }
-                    contentTmp += '<div style="display: flex; flex-wrap: wrap; justify-content: center;">';
-                    let size = (180 / itemTypes.length);
-                    for (let p = 0; p < itemTypes.length; p++) {
-                        if (type == 'any') {
-                            contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + typeData[gameLink[p]] + '" class="button" target="_blank" style="background-color:' + typeData[gameColour[p]] + ';max-width: ' + size.toString() + 'px;text-wrap: auto;">Download on ' + typeData[gameType[p]] + '</a></div>'
-                        }
-                        else if (type == itemTypes[p]) {
-                            contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + typeData[gameLink[p]] + '" class="button" target="_blank" style="background-color:' + typeData[gameColour[p]] + ';max-width: 180px;text-wrap: auto;">Download on ' + typeData[gameType[p]] + '</a></div>'
-                        }
+            }
 
-                    }
-                    contentTmp += '</div>&lrm;</div><p>&lrm;</div><p>&lrm;';
-
-                    content += contentTmp;
+            if (type == 'any' || games[i].type.includes(type)) {
+                let itemTypes = games[i].type;
+                let contentTmp = "";
+                contentTmp += '<div class="gamecontent"> <div class="thumb_wrapper"><h3 style="padding-top:5px;padding-bottom:5px;max-width:200px;font-size:1em;height: 2em;max-height: 2em;min-height: 1em;">' + games[i].name + '</h3><br>';
+                if (itemTypes.length == 1) {
+                    contentTmp += '<a href="' + gameLink[0] + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
                 }
+                else {
+                    contentTmp += '<img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;">';
+                }
+                contentTmp += '<div style="display: flex; flex-wrap: wrap; justify-content: center;">';
+                let size = (180 / itemTypes.length);
+                for (let p = 0; p < itemTypes.length; p++) {
+                    if (type == 'any') {
+                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;text-wrap: auto;">Download on ' + typeData[itemTypes[p]].gameType + '</a></div>'
+                    }
+                    else if (type == itemTypes[p]) {
+                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: 180px;text-wrap: auto;">Download on ' + typeData[itemTypes[p]].gameType + '</a></div>'
+                    }
 
+                }
+                contentTmp += '</div>&lrm;</div><p>&lrm;</div><p>&lrm;';
 
-
+                content += contentTmp;
             }
-            if (content != undefined) {
-                gamesHolder.innerHTML = content;
-            }
+
+
 
         }
+        if (content != undefined) {
+            gamesHolder.innerHTML = content;
+        }
+
     }
     typesCompleted++;
 
