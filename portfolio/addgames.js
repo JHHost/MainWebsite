@@ -132,8 +132,12 @@ function SetGames(gamesHolder, type) {
                 let itemTypes = games[i].type;
                 let contentTmp = "";
                 contentTmp += '<div class="gamecontent"> <div class="thumb_wrapper"><h3 style="padding-top:5px;padding-bottom:5px;max-width:200px;font-size:1em;height: 2em;max-height: 2em;min-height: 1em;">' + games[i].name + '</h3><br>';
-                if (itemTypes.length == 1) {
-                    contentTmp += '<a href="' + gameLink[0] + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
+                if (itemTypes.length == 1 || type != 'any') {
+                    for (let p = 0; p < itemTypes.length; p++) {
+                        if (type == itemTypes[p]) {
+                            contentTmp += '<a href="' + gameLink[p] + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
+                        }
+                    }
                 }
                 else {
                     contentTmp += '<img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;">';
