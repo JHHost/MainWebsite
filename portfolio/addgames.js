@@ -59,6 +59,12 @@ var games = {
         "link" : "https://jayden-holliss.itch.io/needa",
         "image": "https://img.itch.zone/aW1nLzIyNzM4ODM5LnBuZw==/347x500/hN93yN.png"
     },
+    10: {
+        "name" : "Online Drawing Game",
+        "type" : "itch",
+        "link" : "https://jayden-holliss.itch.io/online-drawing",
+        "image": "https://img.itch.zone/aW1nLzIyNzM4NzU0LnBuZw==/347x500/K9RuRK.png"
+    },
 };
 var typesCompleted = 0;
 var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
