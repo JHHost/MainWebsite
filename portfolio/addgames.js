@@ -1,57 +1,63 @@
 var games = {
     0: {
-        "name": "Guns GirlZ: Operation Gekkou - Retro",
-        "type": "itch",
-        "link": "https://hoyostans.itch.io/guns-girlz-operation-gekkou-retro",
+        "name" : "Guns GirlZ: Operation Gekkou - Retro",
+        "type" : "itch",
+        "link" : "https://hoyostans.itch.io/guns-girlz-operation-gekkou-retro",
         "image": "https://img.itch.zone/aW1nLzIxNjYxOTUwLnBuZw==/315x250%23c/AsGUtZ.png"
     },
     1: {
-        "name": "Cat Carnival",
-        "type": "itch",
-        "link": "https://jayden-holliss.itch.io/cat-carnival",
+        "name" : "Cat Carnival",
+        "type" : "itch",
+        "link" : "https://jayden-holliss.itch.io/cat-carnival",
         "image": "https://img.itch.zone/aW1nLzE3MzYxNDkzLnBuZw==/original/TVE%2BND.png"
     },
     2: {
-        "name": "Toy Survival",
-        "type": "itch",
-        "link": "https://jayden-holliss.itch.io/toy-survival",
+        "name" : "Toy Survival",
+        "type" : "itch",
+        "link" : "https://jayden-holliss.itch.io/toy-survival",
         "image": "https://img.itch.zone/aW1nLzE4OTMyMDY4LnBuZw==/315x250%23c/3UJj9Z.png"
     },
     3: {
-        "name": "Your Screen",
-        "type": "itch",
-        "link": "https://jayden-holliss.itch.io/your-screen",
+        "name" : "Your Screen",
+        "type" : "itch",
+        "link" : "https://jayden-holliss.itch.io/your-screen",
         "image": ""
     },
     4: {
-        "name": "Bubble Wubble",
-        "type": "ggj",
-        "link": "https://globalgamejam.org/games/2025/bubble-wubble-2",
+        "name" : "Bubble Wubble",
+        "type" : "ggj",
+        "link" : "https://globalgamejam.org/games/2025/bubble-wubble-2",
         "image": ""
     },
     5: {
-        "name": "Audio Waves",
-        "type": "itch",
-        "link": "",
+        "name" : "Audio Waves",
+        "type" : "itch",
+        "link" : "",
         "image": ""
     },
     6: {
-        "name": "Super Fast Racing",
-        "type": "itch",
-        "link": "https://jayden-holliss.itch.io/super-fast-racing",
+        "name" : "Super Fast Racing",
+        "type" : "itch",
+        "link" : "https://jayden-holliss.itch.io/super-fast-racing",
         "image": "https://img.itch.zone/aW1nLzE5OTU5MTc3LnBuZw==/original/MrHtTV.png"
     },
     7: {
-        "name": "Endless Jumper",
-        "type": "google",
-        "link": "https://play.google.com/store/apps/details?id=com.GoodEnoughToBeTheBest.EndlessJumper",
+        "name" : "Endless Jumper",
+        "type" : "google",
+        "link" : "https://play.google.com/store/apps/details?id=com.GoodEnoughToBeTheBest.EndlessJumper",
         "image": "https://play-lh.googleusercontent.com/5Y4l6Dj4jI3iTYOPPauvB12LG__GfP4lnTa1nhpzjGQSpT9ajqrZLxhOMUQyVmN39Rc3=w240-h480-rw"
     },
     8: {
-        "name": "Seeds of Klotho",
-        "type": "itch",
-        "link": "https://teamhyposphere.itch.io/seeds-of-klotho",
+        "name" : "Seeds of Klotho",
+        "type" : "itch",
+        "link" : "https://teamhyposphere.itch.io/seeds-of-klotho",
         "image": "https://img.itch.zone/aW1nLzIxNTc2NTY0LnBuZw==/315x250%23c/Dr4%2BVn.png"
+    },
+    9: {
+        "name" : "NEEDA History Investigation Series",
+        "type" : "itch",
+        "link" : "https://jayden-holliss.itch.io/needa",
+        "image": "https://img.itch.zone/aW1nLzIyNzM4ODM5LnBuZw==/347x500/hN93yN.png"
     },
 };
 var typesCompleted = 0;
