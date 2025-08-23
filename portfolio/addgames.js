@@ -18,48 +18,42 @@ var games = {
         "image": "https://img.itch.zone/aW1nLzE4OTMyMDY4LnBuZw==/315x250%23c/3UJj9Z.png"
     },
     3: {
-        "name": "Your Screen",
-        "type": ["itch"],
-        "link": ["https://jayden-holliss.itch.io/your-screen"],
-        "image": ""
-    },
-    4: {
         "name": "Bubble Wubble",
         "type": ["ggj"],
         "link": ["https://globalgamejam.org/games/2025/bubble-wubble-2"],
         "image": ""
     },
-    5: {
+    4: {
         "name": "Audio Waves",
         "type": ["itch"],
         "link": [],
         "image": ""
     },
-    6: {
+    5: {
         "name": "Super Fast Racing",
         "type": ["itch"],
         "link": ["https://jayden-holliss.itch.io/super-fast-racing"],
         "image": "https://img.itch.zone/aW1nLzE5OTU5MTc3LnBuZw==/original/MrHtTV.png"
     },
-    7: {
+    6: {
         "name": "Endless Jumper",
         "type": ["google"],
         "link": ["https://play.google.com/store/apps/details?id=com.GoodEnoughToBeTheBest.EndlessJumper"],
         "image": "https://play-lh.googleusercontent.com/5Y4l6Dj4jI3iTYOPPauvB12LG__GfP4lnTa1nhpzjGQSpT9ajqrZLxhOMUQyVmN39Rc3=w240-h480-rw"
     },
-    8: {
+    7: {
         "name": "Seeds of Klotho",
         "type": ["itch"],
         "link": ["https://teamhyposphere.itch.io/seeds-of-klotho"],
         "image": "https://img.itch.zone/aW1nLzIxNTc2NTY0LnBuZw==/315x250%23c/Dr4%2BVn.png"
     },
-    9: {
+    8: {
         "name": "NEEDA History Investigation Series",
         "type": ["itch"],
         "link": ["https://jayden-holliss.itch.io/needa"],
         "image": "https://img.itch.zone/aW1nLzIyNzM4ODM5LnBuZw==/347x500/hN93yN.png"
     },
-    10: {
+    9: {
         "name": "Online Drawing Game",
         "type": ["itch"],
         "link": ["https://jayden-holliss.itch.io/online-drawing"],
