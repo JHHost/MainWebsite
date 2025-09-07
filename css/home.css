@@ -290,7 +290,7 @@ h6 {
 }
 
 .footer span {
-    width: 33%;
+    width: 100%;
     padding-left: 2px;
     padding-right: 2px;
 }
@@ -326,7 +326,7 @@ h6 {
 }
 
 .header span {
-    width: 33%;
+    width: 100%;
     padding-left: 2px;
     padding-right: 2px;
 }
