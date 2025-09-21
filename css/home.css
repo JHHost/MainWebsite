@@ -189,7 +189,7 @@ h4 {
 }
 
 ul {
-    list-style: none
+    list-style: inside;
 }
 
 h5,
