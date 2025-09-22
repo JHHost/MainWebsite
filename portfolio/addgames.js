@@ -7,8 +7,8 @@ var games = {
     },
     1: {
         "name": "Cat Carnival",
-        "type": ["itch"],
-        "link": ["https://jayden-holliss.itch.io/cat-carnival"],
+        "type": ["itch", "google"],
+        "link": ["https://jayden-holliss.itch.io/cat-carnival", "https://play.google.com/store/apps/details?id=com.ProjectFish.CatCarnival"],
         "image": "https://img.itch.zone/aW1nLzE3MzYxNDkzLnBuZw==/original/TVE%2BND.png"
     },
     2: {
