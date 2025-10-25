@@ -272,6 +272,12 @@ h6 {
 }
 
 
+.downloadbutton {
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+}
+
 *,
 ::after,
 ::before {
