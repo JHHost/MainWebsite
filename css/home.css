@@ -256,8 +256,13 @@ h6 {
     height: 30px;
 }
 
-.gameiconbutton:hover {
+.gameiconbutton {
     width: 100%;
+    display: contents;
+}
+
+
+.gameiconbutton:hover {
     filter: invert(70%) sepia(1) saturate(200%) hue-rotate(200deg);
 }
 
