@@ -148,14 +148,14 @@ function SetGames(gamesHolder, type) {
                 else {
                     contentTmp += '<img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;">';
                 }
-                contentTmp += '<div style="display: flex; flex-wrap: wrap; justify-content: center;">';
+                contentTmp += '<div style="display: flex; flex-wrap: wrap; justify-content: center;">Downloads</div><div style="display: flex; flex-wrap: wrap; justify-content: center;">';
                 let size = (180 / itemTypes.length);
                 for (let p = 0; p < itemTypes.length; p++) {
                     if (type == 'any') {
-                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;text-wrap: auto;">Download on ' + typeData[itemTypes[p]].gameType + '</a></div>'
+                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;text-wrap: auto;"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon" title="' + typeData[itemTypes[p]].gameType + '"></a></div>'
                     }
                     else if (type == itemTypes[p]) {
-                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: 180px;text-wrap: auto;">Download on ' + typeData[itemTypes[p]].gameType + '</a></div>'
+                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: 180px;text-wrap: auto;"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon" title="' + typeData[itemTypes[p]].gameType + '"></a></div>'
                     }
 
                 }
