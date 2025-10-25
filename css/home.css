@@ -250,12 +250,12 @@ h6 {
     width: 80%;
 }
 
-.platformicon img {
+.platformicon {
     max-height: 30px;
     min-height: 30px;
     height: 30px;
 }
-.platformicon img:hover {
+.platformicon:hover {
     filter: invert(70%) sepia(1) saturate(200%) hue-rotate(200deg);
 }
 
