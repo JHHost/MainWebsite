@@ -255,7 +255,9 @@ h6 {
     min-height: 30px;
     height: 30px;
 }
-.platformicon:hover {
+
+.gameiconbutton:hover {
+    width: 100%;
     filter: invert(70%) sepia(1) saturate(200%) hue-rotate(200deg);
 }
 
