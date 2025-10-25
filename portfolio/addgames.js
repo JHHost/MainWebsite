@@ -152,10 +152,10 @@ function SetGames(gamesHolder, type) {
                 let size = (180 / itemTypes.length);
                 for (let p = 0; p < itemTypes.length; p++) {
                     if (type == 'any') {
-                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;text-wrap: auto;"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon" title="' + typeData[itemTypes[p]].gameType + '"></a></div>'
+                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></a></div>'
                     }
                     else if (type == itemTypes[p]) {
-                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: 180px;text-wrap: auto;"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon" title="' + typeData[itemTypes[p]].gameType + '"></a></div>'
+                        contentTmp += '<div class="downloadbutton" style="align-items: center;text-align: center;"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: 180px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></a></div>'
                     }
 
                 }
