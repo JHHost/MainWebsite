@@ -59,6 +59,15 @@ var games = {
         "link": ["https://jayden-holliss.itch.io/online-drawing"],
         "image": "https://img.itch.zone/aW1nLzIyNzM4NzU0LnBuZw==/347x500/K9RuRK.png"
     },
+    10: {
+        "name": "Path To The Future",
+        "type": ["itch"],
+        "link": ["https://jayden-holliss.itch.io/path-to-the-future"],
+        "image": "https://img.itch.zone/aW1nLzIzNzc0OTIxLnBuZw==/original/mpMnMH.png"
+    },
+
+
+
 };
 
 
