@@ -65,6 +65,12 @@ var games = {
         "link": ["https://jayden-holliss.itch.io/path-to-the-future"],
         "image": "https://img.itch.zone/aW1nLzIzNzc0OTIxLnBuZw==/original/mpMnMH.png"
     },
+    11: {
+        "name": "Murder Hunt",
+        "type": ["itch"],
+        "link": ["https://jayden-holliss.itch.io/murder-hunt"],
+        "image": "https://img.itch.zone/aW1nLzIzODM0NzMzLnBuZw==/315x250%23c/vCij4G.png"
+    },
 
 
 
