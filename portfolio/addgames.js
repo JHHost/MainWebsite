@@ -106,7 +106,9 @@ var typesCompleted = 0;
 var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
 
 
-if (typeof pageType !== 'undefined' || pageType == "portfolio") {
+if (typeof pageType !== 'undefined') var pageType = "portfolio";
+
+if (pageType == "portfolio") {
 
     setTimeout(FetchGames.bind(this, 'gamesHolder', 'any'));
     setTimeout(FetchGames.bind(this, 'googleGamesHolder', 'google'));
@@ -115,23 +117,26 @@ if (typeof pageType !== 'undefined' || pageType == "portfolio") {
 
 }
 
-else if (pageType == "game" && typeof game !== 'undefined') {}
+else if (pageType == "game" && typeof game !== 'undefined') {
+ 
+    setTimeout(FetchGames.bind(this, 'gamePageDownloads', 'any'));
+}
 
 
-function FetchGames(inputclass, type) {
-    let gamesHolder = document.getElementsByClassName(inputclass)[0];
+function FetchGames(inputClass, gameType) {
+    let gamesHolder = document.getElementsByClassName(inputClass)[0];
     if (gamesHolder != undefined) {
-        SetGames(gamesHolder, type);
+        SetGames(gamesHolder, gameType);
     }
     else {
         clearTimeout();
-        setTimeout(FetchGames.bind(this, inputclass, type), 200);
+        setTimeout(FetchGames.bind(this, inputClass, gameType), 200);
     }
 }
 
 
 
-function SetGames(gamesHolder, type) {
+function SetGames(gamesHolder, gameType) {
     for (let i = 0; i < Object.keys(games).length; i++) {
         let content = (gamesHolder.innerHTML);
         //console.log(content);
@@ -145,37 +150,52 @@ function SetGames(gamesHolder, type) {
 
             }
 
-            if (type == 'any' || games[i].type.includes(type)) {
+            if (gameType == 'any' || games[i].type.includes(gameType)) {
                 let itemTypes = games[i].type;
                 let contentTmp = "";
-                contentTmp += '<div class="gamecontent"> <div class="thumb_wrapper"><h3 style="padding-top:5px;padding-bottom:5px;max-width:200px;font-size:1em;height: 2em;max-height: 2em;min-height: 1em;">' + games[i].name + '</h3><br>';
-                if (itemTypes.length == 1) {
-                    contentTmp += '<a href="' + gameLink[0] + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
-                }
-                else if (type != 'any') {
+
+                if (pageType == "portfolio") {
+
+                    contentTmp += '<div class="gamecontent"> <div class="thumb_wrapper"><h3 style="padding-top:5px;padding-bottom:5px;max-width:200px;font-size:1em;height: 2em;max-height: 2em;min-height: 1em;">' + games[i].name + '</h3><br>';
+                    if (itemTypes.length == 1) {
+                        contentTmp += '<a href="' + gameLink[0] + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
+                    }
+                    else if (gameType != 'any') {
+                        for (let p = 0; p < itemTypes.length; p++) {
+                            if (gameType == itemTypes[p]) {
+                                contentTmp += '<a href="' + gameLink[p] + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
+                            }
+                        }
+                    }
+                    else {
+                        contentTmp += '<img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;">';
+                    }
+                    contentTmp += '<div style="display: flex; flex-wrap: wrap; justify-content: center;">Downloads</div><div style="display: flex; flex-wrap: wrap; justify-content: center;">';
+                    let size = (180 / itemTypes.length);
                     for (let p = 0; p < itemTypes.length; p++) {
-                        if (type == itemTypes[p]) {
-                            contentTmp += '<a href="' + gameLink[p] + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
+                        if (gameType == 'any') {
+                            contentTmp += '<div class="folioDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;min-width: ' + size.toString() + 'px;width: ' + size.toString() + 'px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
+                        }
+                        else if (gameType == itemTypes[p]) {
+                            contentTmp += '<div class="folioDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: 180px;min-width: 180px; width: 180px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
+                        }
+
+                    }
+                    contentTmp += '</div>&lrm;</div><p>&lrm;</div><p>&lrm;';
+                    
+                }
+
+                else if (pageType == "game") {
+                    if (game == games[i].name) {
+                        for (let p = 0; p < itemTypes.length; p++) {
+                            contentTmp += '<div class="gamePageDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
                         }
                     }
                 }
-                else {
-                    contentTmp += '<img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;">';
-                }
-                contentTmp += '<div style="display: flex; flex-wrap: wrap; justify-content: center;">Downloads</div><div style="display: flex; flex-wrap: wrap; justify-content: center;">';
-                let size = (180 / itemTypes.length);
-                for (let p = 0; p < itemTypes.length; p++) {
-                    if (type == 'any') {
-                        contentTmp += '<div class="folioDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;min-width: ' + size.toString() + 'px;width: ' + size.toString() + 'px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
-                    }
-                    else if (type == itemTypes[p]) {
-                        contentTmp += '<div class="folioDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: 180px;min-width: 180px; width: 180px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
-                    }
-
-                }
-                contentTmp += '</div>&lrm;</div><p>&lrm;</div><p>&lrm;';
 
                 content += contentTmp;
+                
+
             }
 
 
