@@ -447,6 +447,10 @@ ul {
     max-width: 25vw;
     min-width: 300px;
     min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 .gameText {
