@@ -105,10 +105,18 @@ var typeData = {
 var typesCompleted = 0;
 var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
 
-setTimeout(FetchGames.bind(this, 'gamesHolder', 'any'));
-setTimeout(FetchGames.bind(this, 'googleGamesHolder', 'google'));
-setTimeout(FetchGames.bind(this, 'itchGamesHolder', 'itch'));
-setTimeout(FetchGames.bind(this, 'ggjGamesHolder', 'ggj'));
+
+if (typeof pageType !== 'undefined' || pageType == "portfolio") {
+
+    setTimeout(FetchGames.bind(this, 'gamesHolder', 'any'));
+    setTimeout(FetchGames.bind(this, 'googleGamesHolder', 'google'));
+    setTimeout(FetchGames.bind(this, 'itchGamesHolder', 'itch'));
+    setTimeout(FetchGames.bind(this, 'ggjGamesHolder', 'ggj'));
+
+}
+
+else if (pageType == "game" && typeof game !== 'undefined')
+
 
 function FetchGames(inputclass, type) {
     let gamesHolder = document.getElementsByClassName(inputclass)[0];
@@ -158,10 +166,10 @@ function SetGames(gamesHolder, type) {
                 let size = (180 / itemTypes.length);
                 for (let p = 0; p < itemTypes.length; p++) {
                     if (type == 'any') {
-                        contentTmp += '<div class="downloadbutton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;min-width: ' + size.toString() + 'px;width: ' + size.toString() + 'px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
+                        contentTmp += '<div class="folioDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;min-width: ' + size.toString() + 'px;width: ' + size.toString() + 'px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
                     }
                     else if (type == itemTypes[p]) {
-                        contentTmp += '<div class="downloadbutton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: 180px;min-width: 180px; width: 180px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
+                        contentTmp += '<div class="folioDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: 180px;min-width: 180px; width: 180px;text-wrap: auto;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
                     }
 
                 }

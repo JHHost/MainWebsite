@@ -272,7 +272,7 @@ h6 {
 }
 
 
-.downloadbutton {
+.folioDownloadButton {
     align-items: center;
     text-align: center;
     padding: 0px;
@@ -431,4 +431,25 @@ textarea,
 ul {
     margin: 0;
     padding: 0
+}
+
+
+.gameWrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    padding: 2%;
+    width: 96%;
+}
+
+.gameIcon {
+    width: 25vw;
+    max-width: 25vw;
+    min-width: 240px;
+    min-height: 240px;
+}
+
+.gameText {
+    max-width: 65vw;
+    min-width: 240px;
 }
