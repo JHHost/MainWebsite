@@ -106,7 +106,9 @@ var typesCompleted = 0;
 var undefinedImage = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
 
 
-if (typeof pageType !== 'undefined') var pageType = "portfolio";
+if (typeof pageType === 'undefined' || pageType == null) {
+    var pageType = "portfolio";
+}
 
 if (pageType == "portfolio") {
 
@@ -188,7 +190,7 @@ function SetGames(gamesHolder, gameType) {
                 else if (pageType == "game") {
                     if (game == games[i].name) {
                         for (let p = 0; p < itemTypes.length; p++) {
-                            contentTmp += '<div class="gamePageDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
+                            contentTmp += '<div class="gamePageDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + '; width:100%" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
                         }
                     }
                 }
@@ -215,7 +217,9 @@ function SetGames(gamesHolder, gameType) {
 }
 
 
-AddCollapse();
+if (pageType == "portfolio") {
+    AddCollapse();
+}
 
 function AddCollapse() {
     if (typesCompleted >= 4) {
