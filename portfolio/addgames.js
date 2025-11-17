@@ -171,7 +171,9 @@ function SetGames(gamesHolder, gameType) {
                 if (pageType == "portfolio") {
 
                     contentTmp += '<div class="gamecontent"> <div class="thumb_wrapper"><h3 style="padding-top:5px;padding-bottom:5px;max-width:200px;font-size:1em;height: 2em;max-height: 2em;min-height: 1em;">' + games[i].name + '</h3><br>';
-                    if (itemTypes.length == 1) {
+                    
+                    // Code used to link to download page. No longer used. Links to my page on it instead.
+                    /*if (itemTypes.length == 1) {
                         contentTmp += '<a href="' + gameLink[0] + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
                     }
                     else if (gameType != 'any') {
@@ -183,7 +185,10 @@ function SetGames(gamesHolder, gameType) {
                     }
                     else {
                         contentTmp += '<img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;">';
-                    }
+                    }*/
+
+                    contentTmp += '<a href="' + games[i].page + '"><img src="' + gameImage + '" class="thumb" srcset="' + gameImage + ' 2x" style="max-height:200px;min-height:200px;height:200px;"></a>';
+
                     contentTmp += '<div style="display: flex; flex-wrap: wrap; justify-content: center;">Downloads</div><div style="display: flex; flex-wrap: wrap; justify-content: center;">';
                     let size = (180 / itemTypes.length);
                     for (let p = 0; p < itemTypes.length; p++) {
