@@ -115,7 +115,7 @@ if (typeof pageType !== 'undefined' || pageType == "portfolio") {
 
 }
 
-else if (pageType == "game" && typeof game !== 'undefined')
+else if (pageType == "game" && typeof game !== 'undefined') {}
 
 
 function FetchGames(inputclass, type) {
