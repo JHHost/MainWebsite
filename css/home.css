@@ -303,25 +303,25 @@ h6 {
 .footer {
     background-color: rgba(11, 11, 11, 0.6);
     color: #444;
-    padding: 8px;
+    padding: 8px 8px 8px 8px;
     text-align: right;
     word-wrap: break-word;
     position: fixed;
     bottom: 0px;
     right: 0px;
+    left: 0px;
     width: 100%;
     max-height: 20vh;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: left;
     overflow-x:scroll;
     overflow-y:auto;
 }
 
 .footer span {
     width: 100%;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding: 0px 2px 0px 2px;
 }
 
 .footer a {
