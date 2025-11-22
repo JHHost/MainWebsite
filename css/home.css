@@ -314,6 +314,7 @@ h6 {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    overflow-y:scroll;
 }
 
 .footer span {
