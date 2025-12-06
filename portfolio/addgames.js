@@ -30,8 +30,8 @@ var games = {
     4: {
         "name": "Audio Waves",
         "type": ["itch"],
-        "link": [],
-        "image": "",
+        "link": ["https://jayden-holliss.itch.io/audio-waves"],
+        "image": "https://img.itch.zone/aW1nLzI0NDIxODU3LnBuZw==/original/NqFXB2.png",
         "page" : "https://jaydenholliss.com.au/Games/AudioWaves"
     },
     5: {
