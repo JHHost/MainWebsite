@@ -481,7 +481,8 @@ ul {
 
 .carouselBase {
     margin: 0px 10% 0px 10%;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll;
     display: flex;
     position: relative;
 }
