@@ -210,7 +210,7 @@ function SetGames(gamesHolder, gameType) {
                             contentTmp += '<div class="gamePageDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + '; width:100%" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/'+itemTypes[p]+ '.png" class="platformicon"></div></a></div>'
                         }
                         let gameIcon = document.getElementsByClassName("gameIcon")[0];
-                        gameIcon.innerHTML = '<img src="'+games[i].image+'">';
+                        gameIcon.innerHTML = '<img src="'+gameImage+'">';
 
                     }
                 }
