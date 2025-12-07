@@ -494,9 +494,10 @@ ul {
 }
 
 .carouselItem {
-    min-width: 100px;
-    min-width: 20px;
+    min-width: 100%;
     width: 100%;
-    max-width: 30vw;
-    
+    max-width: 100%;
+    min-height: 200px;
+    height: 200px;
+    max-height: 200px;
 }
