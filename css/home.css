@@ -458,6 +458,10 @@ ul {
 .gameText {
     max-width: 65vw;
     min-width: 300px;
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .gamePageDownloads {
