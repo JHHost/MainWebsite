@@ -491,7 +491,6 @@ ul {
     width: 100%;
     display: flex;
     position: relative;
-    left: -39px;
 }
 
 .carouselItem {
