@@ -479,3 +479,24 @@ ul {
     margin-bottom: 1%;
 }
 
+.carouselBase {
+    margin: 0px 10% 0px 10%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.carouselHolder {
+    width: 100%;
+    display: flex;
+    position: relative;
+    left: -39px;
+}
+
+.carouselItem {
+    min-width: 100px;
+    min-width: 20px;
+    width: 100%;
+    max-width: 30vw;
+    
+}
