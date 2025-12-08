@@ -508,6 +508,7 @@ ul {
     height: 200px;
     max-height: 200px;
     margin: 15px 12.5px 15px 12.5px;
+    cursor: pointer;
 }
 
 .imageViewBase {

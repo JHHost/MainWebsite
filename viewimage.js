@@ -10,6 +10,7 @@ function ToggleImage(url, opening) {
     }
     else {
         imageViewBase.style.visibility = "hidden";
+        imageView.setAttribute("src", "");
     }
 }
 
