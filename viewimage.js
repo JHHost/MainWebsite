@@ -9,7 +9,7 @@ function ToggleImage(url, opening) {
 }
 
 
-var carouselImages = document.getElementsByClassName("carouselItem");
+carouselImages = document.getElementsByClassName("carouselItem");
 
 if (carouselImages.length > 0) {
     fetch("/viewimage.html")
@@ -25,8 +25,8 @@ if (carouselImages.length > 0) {
                 });
             }
 
-            var imageViewBase = document.getElementsByClassName("imageViewBase")[0];
-            var imageView = document.getElementsByClassName("imageView")[0];
+            imageViewBase = document.getElementsByClassName("imageViewBase")[0];
+            imageView = document.getElementsByClassName("imageView")[0];
 
             imageViewBase.addEventListener("click", function () {
                 ToggleImage("", false);
@@ -37,4 +37,3 @@ if (carouselImages.length > 0) {
 
 
 }
-
