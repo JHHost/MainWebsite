@@ -44,6 +44,6 @@ if (carouselImages.length > 0) {
 
 function SetVariables() {
     imageViewBase = document.getElementsByClassName("imageViewBase")[0];
-    imageView = document.getElementsByClassName("imageView")[0];
+    imageView = document.getElementById("imageView");
     return;
 }
