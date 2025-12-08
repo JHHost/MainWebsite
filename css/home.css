@@ -84,9 +84,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    margin-left: -.75rem;
-    margin-right: -.75rem;
-    margin-top: -.75rem;
+    margin: 0;
     color: #4a4a4a;
     font-size: 1em;
     font-weight: 400;
@@ -415,7 +413,6 @@ video {
 }
 
 blockquote,
-body,
 dd,
 dl,
 dt,
