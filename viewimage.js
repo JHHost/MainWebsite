@@ -31,7 +31,7 @@ if (carouselImages.length > 0) {
     var imageView = document.getElementsByClassName("imageView")[0];
 
     imageViewBase.addEventListener("click", function () {
-        ToggleImageOn(null, false);
+        ToggleImageOn("", false);
     });
 }
 
