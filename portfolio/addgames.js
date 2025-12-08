@@ -151,7 +151,7 @@ function FetchGames(inputClass, gameType) {
 
 
 function SetGames(gamesHolder, gameType) {
-    for (let i = 0; i < Object.keys(games).length; i++) {
+    for (let i = Object.keys(games).length-1; i >= 0 ; i--) {
         let content = (gamesHolder.innerHTML);
         //console.log(content);
         let gameLink = games[i].link;
