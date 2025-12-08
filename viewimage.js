@@ -12,7 +12,7 @@ function ToggleImage(url, opening) {
 let carouselImages = document.getElementsByClassName("carouselItem");
 
 if (carouselImages.length > 0) {
-    fetch("/imageview.html")
+    fetch("/viewimage.html")
         .then(response => {
             return response.text()
         })
