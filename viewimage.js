@@ -1,4 +1,9 @@
 function ToggleImage(url, opening) {
+
+    if (typeof imageViewBase === "imageViewBase" || typeof imageView === "imageViewBase") {
+        SetVariables();
+    }
+
     if (opening) {
         imageView.setAttribute("src", url);
         imageViewBase.style.visibility = "visible";
@@ -25,8 +30,7 @@ if (carouselImages.length > 0) {
                 });
             }
 
-            imageViewBase = document.getElementsByClassName("imageViewBase")[0];
-            imageView = document.getElementsByClassName("imageView")[0];
+            SetVariables();
 
             imageViewBase.addEventListener("click", function () {
                 ToggleImage("", false);
@@ -36,4 +40,10 @@ if (carouselImages.length > 0) {
 
 
 
+}
+
+function SetVariables() {
+    imageViewBase = document.getElementsByClassName("imageViewBase")[0];
+    imageView = document.getElementsByClassName("imageView")[0];
+    return;
 }
