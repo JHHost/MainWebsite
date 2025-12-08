@@ -1,3 +1,8 @@
+body {
+
+}
+
+
 .button,
 .file-cta,
 .file-name,
@@ -86,6 +91,7 @@ body {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
+    padding: 30px 0px 30px 0px;
 }
 
 a {
