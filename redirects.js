@@ -9,9 +9,9 @@ var siteRedirects = {
 
 var siteRedirectsKeys = Object.keys(siteRedirects);
 
-var currentUrl = window.location.href.remove("https://jaydenholliss.com.au");
+var currentUrl = window.location.href.replace("https://jaydenholliss.com.au", "");
 
-if (siteRedirectsKeys.contains(currentUrl)) {
+if (siteRedirectsKeys.includes(currentUrl)) {
     window.location.replace(siteRedirects[currentUrl]);
 }
 
