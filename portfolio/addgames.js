@@ -83,6 +83,13 @@ var games = {
         "image": "https://img.itch.zone/aW1nLzIzODM0NzMzLnBuZw==/315x250%23c/vCij4G.png",
         "page" : "https://jaydenholliss.com.au/Games/MurderHunt"
     },
+    12: {
+        "name": "Guns GirlZ: Operation Gekkou - Reborn",
+        "type": ["itch"],
+        "link": "",
+        "image": "https://img.itch.zone/aW1nLzIxNjYxOTc3LnBuZw==/original/I%2BoDMo.png",
+        "page" : "https://jaydenholliss.com.au/Games/GGZOG-Reborn"
+    }
 
 
 
