@@ -52,7 +52,7 @@ var games = {
         "name": "Seeds of Klotho",
         "type": ["itch"],
         "link": ["https://teamhyposphere.itch.io/seeds-of-klotho"],
-        "image": "https://img.itch.zone/aW1nLzIxNTc2NTY0LnBuZw==/315x250%23c/Dr4%2BVn.png",
+        "image": "https://img.itch.zone/aW1nLzI0OTc0OTAzLnBuZw==/315x250%23c/KT6V3Z.png",
         "page" : "https://jaydenholliss.com.au/Games/SeedsOfKlotho"
     },
     8: {
