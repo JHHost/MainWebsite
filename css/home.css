@@ -305,7 +305,7 @@ h6 {
 }
 
 .footer {
-    background-color: rgba(11, 11, 11, 0.6);
+    background-color: rgba(11, 11, 11, 0.8);
     color: #444;
     padding: 8px 8px 8px 8px;
     text-align: right;
@@ -343,7 +343,7 @@ h6 {
 }
 
 .header {
-    background-color: rgba(11, 11, 11, 0.6);
+    background-color: rgba(11, 11, 11, 0.8);
     color: #ec0909;
     padding: 8px;
     text-align: right;
