@@ -169,9 +169,9 @@ function SetGames(gamesHolder, gameType) {
         let content = (gamesHolder.innerHTML);
         //console.log(content);
         let gameLink = games[i].link;
-        console.log(gameLink);
+        //console.log(gameLink);
         if (gameLink.length > 0) {
-            console.log(gameLink);
+            //console.log(gameLink);
             let gameImage = games[i].image;
             if (gameImage == "") {
                 gameImage = undefinedImage;
