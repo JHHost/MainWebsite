@@ -86,7 +86,7 @@ var games = {
     12: {
         "name": "Guns GirlZ: Operation Gekkou - Reborn",
         "type": ["itch"],
-        "link": [],
+        "link": ["https://hoyostans.itch.io/guns-girlz-operation-gekkou-reborn"],
         "image": "https://img.itch.zone/aW1nLzIxNjYxOTc3LnBuZw==/original/I%2BoDMo.png",
         "page": "https://jaydenholliss.com.au/Games/GGZOG-Reborn"
     },
