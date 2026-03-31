@@ -24,7 +24,7 @@ var games = {
         "name": "Bubble Wubble",
         "type": ["ggj"],
         "link": ["https://globalgamejam.org/games/2025/bubble-wubble-2"],
-        "image": "",
+        "image": "https://jaydenholliss.com.au/Games/BubbleWubble/ico.png",
         "page": "https://jaydenholliss.com.au/Games/BubbleWubble"
     },
     4: {
