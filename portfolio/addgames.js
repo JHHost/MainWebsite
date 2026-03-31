@@ -89,13 +89,6 @@ var games = {
         "link": ["https://hoyostans.itch.io/guns-girlz-operation-gekkou-reborn"],
         "image": "https://img.itch.zone/aW1nLzIxNjYxOTc3LnBuZw==/original/I%2BoDMo.png",
         "page": "https://jaydenholliss.com.au/Games/GGZOG-Reborn"
-    },
-    13: {
-        "name": "Water Works",
-        "type": ["itch"],
-        "link": ["https://jayden-holliss.itch.io/water-works"],
-        "image": "",
-        "page": "https://jaydenholliss.com.au/Games/WaterWorks"
     }
 
 
