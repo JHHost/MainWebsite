@@ -62,8 +62,10 @@ textarea {
 .logo {
     text-align: center;
     user-select: none;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    /*margin-top: 20px;
+    margin-bottom: 40px;*/
+    margin-top: 0px;
+    margin-bottom: 0px;
     align-items: center;
     display: flex;
     flex-direction: column;
