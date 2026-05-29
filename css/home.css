@@ -65,6 +65,29 @@ textarea {
     margin-top: 20px;
     margin-bottom: 40px;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logo img {
+    height: 65vh;
+    max-height: 65vw;
+    width: 65vw;
+    max-width: 65vh;
+}
+
+
+.logo title {
+    height: auto;
+    max-height: auto;
+    width: 60vw;
+    max-width: 60vh;
+    color: #008bfc;
+    display: block;
+    font-size: 250%;
+    font-weight: 640;
+    margin: 0px;
 }
 
 body {
