@@ -83,13 +83,14 @@ textarea {
 .logo title {
     height: auto;
     max-height: auto;
-    width: 60vw;
-    max-width: 60vh;
+    width: 80vw;
+    max-width: 80vh;
     color: #008bfc;
     display: block;
     font-size: 250%;
     font-weight: 640;
     margin: 0px;
+    text-align: center;
 }
 
 body {
