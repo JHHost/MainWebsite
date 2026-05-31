@@ -266,12 +266,12 @@ function AddButton(buttonType, link, colour, gameType="", itemType = "", size = 
 
     output += style + '" title="' + gameType + '"><div class="gameiconbutton';
 
-    if (itemType.length > 0) {
+    if (itemType != "") {
         output += '"><img src="/img/GamePlatforms/' + itemType + '.png" class="platformicon">';
     }
-    else if (textName.length > 0) {
+    else if (textName != "") {
         output += 'style="color: ';
-        if (nameColour.length > 0) {
+        if (nameColour != "") {
             output += nameColour;
         }
         else {
@@ -299,7 +299,7 @@ function SetTextButtons(buttonType) {
         let textColourAttribute = inputs[i].getAttribute("textColour");
         let gameTypeAttribute = inputs[i].getAttribute("gameType");
 
-        inputs[i].outerHTML = AddButton(buttonType, linkAttribute, colourAttribute, gameTypeAttribute, textName=nameAttribute, nameColour=textColourAttribute);
+        inputs[i].outerHTML = AddButton(buttonType=buttonType, link=linkAttribute, colour=colourAttribute, gameType=gameTypeAttribute, textName=nameAttribute, nameColour=textColourAttribute);
     }
 
 }
