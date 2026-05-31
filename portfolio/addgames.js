@@ -203,7 +203,7 @@ function SetGames(gamesHolder, gameType) {
                             if (gameType == itemTypes[p]) {
                                 size = 180;
                             }
-                            contentTmp += '<div class="folioDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + ';max-width: ' + size.toString() + 'px;min-width: ' + size.toString() + 'px;width: ' + size.toString() + 'px;text-wrap: auto;padding:0px;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/' + itemTypes[p] + '.png" class="platformicon"></div></a></div>'
+                            contentTmp += AddButton("folioDownloadButton", gameLink[p], typeData[itemTypes[p]].gameColour, typeData[itemTypes[p]].gameType, itemTypes[p], size);
                         }
 
                     }
@@ -214,7 +214,7 @@ function SetGames(gamesHolder, gameType) {
                 else if (pageType == "game") {
                     if (game == games[i].name) {
                         for (let p = 0; p < itemTypes.length; p++) {
-                            contentTmp += '<div class="gamePageDownloadButton"><a href="' + gameLink[p] + '" class="button" target="_blank" style="background-color:' + typeData[itemTypes[p]].gameColour + '; width:100%;padding:0px;" title="' + typeData[itemTypes[p]].gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/' + itemTypes[p] + '.png" class="platformicon"></div></a></div>'
+                            contentTmp += AddButton("gamePageDownloadButton", gameLink[p], typeData[itemTypes[p]].gameColour, typeData[itemTypes[p]].gameType, itemTypes[p]);
                         }
                         let gameIcon = document.getElementsByClassName("gameIcon")[0];
                         gameIcon.innerHTML = '<img src="' + gameImage + '">';
@@ -247,6 +247,29 @@ function SetGames(gamesHolder, gameType) {
 if (pageType == "portfolio") {
     AddCollapse();
 }
+
+
+function AddButton(buttonType, link, colour, gameType, itemType, size = 180) {
+
+    let output = '<div class="' + buttonType + '"><a href="' + link + '" class="button" target="_blank" style="';
+
+    let style = 'style="background-color:' + colour + '; padding:0px;';
+
+    if (buttonType == 'folioDownloadButton') {
+        style += ';max-width: ' + size.toString() + 'px;min-width: ' + size.toString() + 'px;width: ' + size.toString() + 'px;text-wrap: auto;';
+    }
+    else if (buttonType == 'gamePageDownloadButton') {
+        style += 'width:100%;';
+    }
+    else { return ''; }
+
+    output += '" title="' + gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/' + itemType + '.png" class="platformicon"></div></a></div>'
+
+    return output;
+
+}
+
+
 
 function AddCollapse() {
     if (typesCompleted >= 4) {
