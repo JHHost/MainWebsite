@@ -310,7 +310,7 @@ function SetTextButtons(buttonType) {
         let textColourAttribute = inputs[i].getAttribute("textColour");
         let gameTypeAttribute = inputs[i].getAttribute("gameType");
 
-        inputs[i].outerHTML = AddButton(buttonType=buttonType, link=linkAttribute, colour=colourAttribute, gameType=gameTypeAttribute, textName=nameAttribute, nameColour=textColourAttribute);
+        inputs[i].outerHTML = AddButton(buttonType, linkAttribute, colourAttribute, gameTypeAttribute, "", 0, nameAttribute, textColourAttribute);
     }
 
 }
