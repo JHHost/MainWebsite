@@ -251,7 +251,7 @@ if (pageType == "portfolio") {
 
 function AddButton(buttonType, link, colour, gameType, itemType = "", size = 180, name = "") {
 
-    let output = '<div class="' + buttonType + '"><a href="' + link + '" class="button" target="_blank" style="';
+    let output = '<div class="' + buttonType + '"><a href="' + link + '" class="button" target="_blank" ';
 
     let style = 'style="background-color:' + colour + '; padding:0px;';
 
@@ -265,10 +265,10 @@ function AddButton(buttonType, link, colour, gameType, itemType = "", size = 180
 
     output += style + '" title="' + gameType + '"><div class="gameiconbutton';
 
-    if (itemType != "") {
+    if (itemType.length > 0) {
         output += '"><img src="/img/GamePlatforms/' + itemType + '.png" class="platformicon">';
     }
-    else if (name != "") {
+    else if (name.length > 0) {
         output += 'style="color: white;"">' + name;
     }
     else { return ''; }
