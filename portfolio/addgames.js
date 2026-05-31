@@ -148,6 +148,7 @@ function FetchGames(inputClass, gameType) {
     let gamesHolder = document.getElementsByClassName(inputClass)[0];
     if (gamesHolder != undefined) {
         SetGames(gamesHolder, gameType);
+        if (inputClass == "gamePageDownloads") SetTextButtons("gamePageDownloadButton");
     }
     else {
         clearTimeout();
@@ -249,7 +250,7 @@ if (pageType == "portfolio") {
 }
 
 
-function AddButton(buttonType, link, colour, gameType, itemType = "", size = 180, name = "") {
+function AddButton(buttonType, link, colour, gameType="", itemType = "", size = 180, textName = "", nameColour = "") {
 
     let output = '<div class="' + buttonType + '"><a href="' + link + '" class="button" target="_blank" ';
 
@@ -268,14 +269,38 @@ function AddButton(buttonType, link, colour, gameType, itemType = "", size = 180
     if (itemType.length > 0) {
         output += '"><img src="/img/GamePlatforms/' + itemType + '.png" class="platformicon">';
     }
-    else if (name.length > 0) {
-        output += 'style="color: white;"">' + name;
+    else if (textName.length > 0) {
+        output += 'style="color: ';
+        if (nameColour.length > 0) {
+            output += nameColour;
+        }
+        else {
+            output += "white";
+        }
+
+        output += ';">' + textName;
     }
     else { return ''; }
 
     output += '</div></a></div>';
 
     return output;
+
+}
+
+
+function SetTextButtons(buttonType) {
+    let inputs = document.getElementsByClassName("textButton");
+
+    for (let i = 0; i < inputs.length; i++) {
+        let nameAttribute = inputs[i].getAttribute("name");
+        let linkAttribute = inputs[i].getAttribute("link");
+        let colourAttribute = inputs[i].getAttribute("colour");
+        let textColourAttribute = inputs[i].getAttribute("textColour");
+        let gameTypeAttribute = inputs[i].getAttribute("gameType");
+
+        inputs[i].outerHTML = AddButton(buttonType, linkAttribute, colourAttribute, gameTypeAttribute, textName=nameAttribute, nameColour=textColourAttribute);
+    }
 
 }
 
