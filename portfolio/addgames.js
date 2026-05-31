@@ -263,13 +263,13 @@ function AddButton(buttonType, link, colour, gameType, itemType = "", size = 180
     }
     else { return ''; }
 
-    output += '" title="' + gameType + '"><div class="gameiconbutton';
+    output += style + '" title="' + gameType + '"><div class="gameiconbutton';
 
     if (itemType != "") {
         output += '"><img src="/img/GamePlatforms/' + itemType + '.png" class="platformicon">';
     }
     else if (name != "") {
-        output += 'style="color: white;"">'+name;
+        output += 'style="color: white;"">' + name;
     }
     else { return ''; }
 
