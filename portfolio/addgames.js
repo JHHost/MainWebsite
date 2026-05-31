@@ -253,10 +253,15 @@ if (pageType == "portfolio") {
 function AddButton(buttonType, link, colour, gameType="", itemType = "", size = 180, textName = "", nameColour = "") {
 
 
-    console.log(itemType);
-    console.log("itemType");
-    console.log(textName);
-    console.log("textName");
+    console.log(`buttonType [${buttonType}]`);
+    console.log(`link [${link}]`);
+    console.log(`colour [${colour}]`);
+    console.log(`gameType [${gameType}]`);
+    console.log(`itemType [${itemType}]`);
+    console.log(`size [${size}]`);
+    console.log(`textName [${textName}]`);
+    console.log(`nameColour [${nameColour}]`);
+
 
     let output = '<div class="' + buttonType + '"><a href="' + link + '" class="button" target="_blank" ';
 
