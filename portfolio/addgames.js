@@ -249,7 +249,7 @@ if (pageType == "portfolio") {
 }
 
 
-function AddButton(buttonType, link, colour, gameType, itemType, size = 180) {
+function AddButton(buttonType, link, colour, gameType, itemType = "", size = 180, name = "") {
 
     let output = '<div class="' + buttonType + '"><a href="' + link + '" class="button" target="_blank" style="';
 
@@ -263,7 +263,17 @@ function AddButton(buttonType, link, colour, gameType, itemType, size = 180) {
     }
     else { return ''; }
 
-    output += '" title="' + gameType + '"><div class="gameiconbutton"><img src="/img/GamePlatforms/' + itemType + '.png" class="platformicon"></div></a></div>'
+    output += '" title="' + gameType + '"><div class="gameiconbutton';
+
+    if (itemType != "") {
+        output += '"><img src="/img/GamePlatforms/' + itemType + '.png" class="platformicon">';
+    }
+    else if (name != "") {
+        output += 'style="color: white;"">'+name;
+    }
+    else { return ''; }
+
+    output += '</div></a></div>';
 
     return output;
 
