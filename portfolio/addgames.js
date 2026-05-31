@@ -278,7 +278,7 @@ function AddButton(buttonType, link, colour, gameType="", itemType = "", size = 
     output += style + '" title="' + gameType + '"><div class="gameiconbutton"';
 
     if (itemType != "") {
-        output += '"><img src="/img/GamePlatforms/' + itemType + '.png" class="platformicon">';
+        output += '><img src="/img/GamePlatforms/' + itemType + '.png" class="platformicon">';
     }
     else if (textName != "") {
         output += 'style="color: ';
