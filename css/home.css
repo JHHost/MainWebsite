@@ -352,6 +352,8 @@ h6 {
 .footer span {
     width: 100%;
     padding: 0px 2px 0px 2px;
+    background: url("../img/border.png");
+    background-size: 100% 100%;
 }
 
 .footer a {
@@ -388,6 +390,8 @@ h6 {
     width: 100%;
     padding-left: 2px;
     padding-right: 2px;
+    background: url("../img/border.png");
+    background-size: 100% 100%;
 }
 
 .header a {
