@@ -534,6 +534,12 @@ ul {
     cursor: pointer;
 }
 
+.carouselItem:hover {
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+}
+
+
 .imageViewBase {
     position: fixed;
     min-width: 100vw;
