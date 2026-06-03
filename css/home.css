@@ -208,11 +208,12 @@ a:hover {
     max-height: 200px;
     min-height: 200px;
     height: 200px;
-    padding: 2px;
+    padding: 5px;
 }
 
 .thumb:hover {
     padding: 0px;
+    scale: 1.05;
     transition: all 0.3s ease-in-out
 }
 
@@ -392,7 +393,7 @@ h6 {
     background: url("../img/border.png");
 }
 
-.header {   
+.header {
     top: 0px;
     justify-content: center;
     max-height: 24vh;
