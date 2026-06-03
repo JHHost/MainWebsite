@@ -277,9 +277,9 @@ h6 {
 }
 
 .textcontent {
-    background-color: rgb(154 146 225 / 30%);
+    background-color: rgba(34, 65, 122, 0.7);
     border-radius: 33px 33px 33px 33px;
-    color: white;
+    color: rgb(242, 246, 255);
     display: block;
     overflow: hidden;
     margin: 2%;
