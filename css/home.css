@@ -1,6 +1,4 @@
-body {
-
-}
+body {}
 
 
 .button,
@@ -136,6 +134,17 @@ a:hover {
 }
 
 
+.thumb_wrapper h3 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 200px;
+    font-size: 1em;
+    height: 2em;
+    max-height: 2em;
+    min-height: 1em;
+}
+
+
 .button:active,
 .button:focus,
 .file-cta:active,
@@ -192,6 +201,21 @@ a:hover {
 
 .collapsible:hover {
     background-color: #00000036;
+}
+
+
+.thumb {
+    max-height: 200px;
+    min-height: 200px;
+    height: 200px;
+    padding: 2px;
+}
+
+.thumb:hover {
+    max-height: 202px;
+    min-height: 202px;
+    height: 202px;
+    transition: all 0.1s ease-in-out
 }
 
 
@@ -345,8 +369,8 @@ h6 {
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
-    overflow-x:scroll;
-    overflow-y:auto;
+    overflow-x: scroll;
+    overflow-y: auto;
 }
 
 .footer span {
@@ -507,7 +531,7 @@ ul {
 
 .gamePageDownloadButton {
     max-width: 20vw;
-    min-width: 180px; 
+    min-width: 180px;
     width: 20vw;
     text-wrap: auto;
     margin-left: 0%;
