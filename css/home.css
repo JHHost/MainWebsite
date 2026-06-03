@@ -550,7 +550,7 @@ ul {
     min-height: 100vh;
     height: 100vh;
     width: 100vw;
-    background: #54789770;
+    background: rgba(89, 127, 255, 0.3);
     left: 0px;
     right: 0px;
     top: 0px;
