@@ -365,7 +365,7 @@ h6 {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    background-color: rgba(0, 14, 51, 0.9);
+    background-color: rgba(12, 16, 25, 0.95);
 }
 
 .edgebase span {
