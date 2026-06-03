@@ -479,7 +479,8 @@ ul {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background: rgba(34, 65, 122, 0.2);
+    background: url("../img/border.png");
+    background-size: 100%;
 }
 
 .gameText {
