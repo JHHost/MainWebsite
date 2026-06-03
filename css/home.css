@@ -479,6 +479,7 @@ ul {
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    background: rgba(34, 65, 122, 0.2);
 }
 
 .gameText {
