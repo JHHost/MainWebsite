@@ -381,6 +381,11 @@ h6 {
     max-height: 20vh;
 }
 
+.footerspacer {
+    padding: 8px;
+    max-height: 20vh;
+}
+
 .edgebase a {
     display: inline-flex;
     width: 100%;
