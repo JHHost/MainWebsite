@@ -327,6 +327,14 @@ function AddCollapse() {
     }
 }
 
+function SwitchArrow(text, active) {
+    text = text.slice(1);
+    
+    if (active) text = "↑" + text;
+    else text = "↓" + text;
+    return text;
+}
+
 function SetCollapse() {
     var coll = document.getElementsByClassName("collapsible");
 
@@ -336,8 +344,10 @@ function SetCollapse() {
             var content = this.nextElementSibling;
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
+                this.innerText = SwitchArrow(this.innerText, True);
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
+                this.innerText = SwitchArrow(this.innerText, False);
             }
         });
     }
