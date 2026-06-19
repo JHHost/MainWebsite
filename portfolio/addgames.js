@@ -344,10 +344,10 @@ function SetCollapse() {
             var content = this.nextElementSibling;
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
-                this.innerText = SwitchArrow(this.innerText, True);
+                this.innerText = SwitchArrow(this.innerText, true);
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
-                this.innerText = SwitchArrow(this.innerText, False);
+                this.innerText = SwitchArrow(this.innerText, false);
             }
         });
     }
