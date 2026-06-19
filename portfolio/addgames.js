@@ -330,7 +330,7 @@ function AddCollapse() {
 function SwitchArrow(text, active) {
     text = text.slice(1);
     
-    if (active) text = "↑" + text;
+    if (!active) text = "↑" + text;
     else text = "↓" + text;
     return text;
 }
