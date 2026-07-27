@@ -463,7 +463,8 @@ pre,
 textarea,
 ul {
     margin: 0;
-    padding: 0
+    padding: 0;
+    text-shadow: -0.5px -0.5px 0 #002399, 0.5px -0.5px 0 #002399, -0.5px 0.5px 0 #002399, 0.5px 0.5px 0 #002399;
 }
 
 
