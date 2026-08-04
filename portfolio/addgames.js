@@ -146,6 +146,7 @@ if (pageType == "portfolio") {
 
     setTimeout(FetchGames.bind(this, 'gamesHolder', 'any'));
     setTimeout(FetchGames.bind(this, 'googleGamesHolder', 'google'));
+    setTimeout(FetchGames.bind(this, 'steamGamesHolder', 'steam'));
     setTimeout(FetchGames.bind(this, 'itchGamesHolder', 'itch'));
     setTimeout(FetchGames.bind(this, 'ggjGamesHolder', 'ggj'));
 
