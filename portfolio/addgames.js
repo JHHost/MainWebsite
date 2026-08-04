@@ -89,8 +89,21 @@ var games = {
         "link": ["https://hoyostans.itch.io/guns-girlz-operation-gekkou-reborn"],
         "image": "https://img.itch.zone/aW1nLzIxNjYxOTc3LnBuZw==/original/I%2BoDMo.png",
         "page": "https://jaydenholliss.com.au/Games/GGZOG-Reborn"
+    },
+    13: {
+        "name": "Pixel Starships 2",
+        "type": ["steam", "google"],
+        "link": ["https://store.steampowered.com/app/2154270/Pixel_Starships_2/", "https://play.google.com/store/apps/details?id=com.savysoda.pss2.android&hl=en_AU"],
+        "image": "https://play-lh.googleusercontent.com/YpDN6kplzuQL28AuSyHvuXj4nr7d4pAcK4fWkgTER5Z4gcfn0VrhS5o4nL8XxD6fJdJMxPR4Dx8FhTEquG-K1A",
+        "page": "https://jaydenholliss.com.au/Games/PSS2"
+    },
+    14: {
+        "name": "Azem",
+        "type": ["itch"],
+        "link": [],
+        "image": "",
+        "page": "https://jaydenholliss.com.au/Games/Azem"
     }
-
 
 
 };
