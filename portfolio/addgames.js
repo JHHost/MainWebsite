@@ -112,7 +112,7 @@ var games = {
 
 var typeData = {
     "steam": {
-        gameColour: "#145689",
+        gameColour: "#1A71AF",
         gameType: "Steam"
     },
     "google": {
