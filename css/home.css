@@ -321,6 +321,7 @@ h6 {
 
 .gameiconbutton:hover {
     filter: invert(70%) sepia(1) saturate(200%) hue-rotate(200deg);
+    transition: all 0.1s ease-in-out;
 }
 
 
