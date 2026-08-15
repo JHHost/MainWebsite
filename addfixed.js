@@ -3,7 +3,8 @@ fetch("/footer.html")
 		return response.text()
 	})
 	.then(data => {
-		document.querySelector("footer").innerHTML = data;
+		let footer = document.querySelector("footer");
+		if (footer != null) footer.innerHTML = data;	
 	});
 
 fetch("/header.html")
@@ -11,5 +12,6 @@ fetch("/header.html")
 		return response.text()
 	})
 	.then(data => {
-		document.querySelector("header").innerHTML = data;
+		let header = document.querySelector("header");
+		if (header != null) header.innerHTML = data;
 	});
