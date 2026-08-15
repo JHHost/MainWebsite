@@ -116,8 +116,8 @@ var games = {
         "type": ["itch"],
         "link": ["https://jayden-holliss.itch.io/azem"],
         "image": "",
-        "page": "https://jaydenholliss.com.au/Games/Azem",
-        "hidden": true
+        "page": "https://jaydenholliss.com.au/Games/AZEM/GamePage",
+        "hidden": false
     }
 
 
