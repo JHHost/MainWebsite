@@ -201,11 +201,11 @@ function SetGames(gamesHolder, gameType) {
 
             }
 
-            if ((gameType == 'any' || games[i].type.includes(gameType)) && !games[i].hidden) {
+            if ((gameType == 'any' || games[i].type.includes(gameType))) {
                 let itemTypes = games[i].type;
                 let contentTmp = "";
 
-                if (pageType == "portfolio") {
+                if (pageType == "portfolio" && !games[i].hidden) {
 
                     contentTmp += '<div class="gamecontent"> <div class="thumb_wrapper"><h3>' + games[i].name + '</h3><br>';
 
