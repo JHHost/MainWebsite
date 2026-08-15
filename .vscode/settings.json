@@ -4,5 +4,13 @@
         "**/*.rpa": true,
         "**/*.rpymc": true,
         "**/cache/": true
+    },
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:MainWebsite}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
     }
 }
