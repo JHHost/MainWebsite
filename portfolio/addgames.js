@@ -193,7 +193,7 @@ function SetGames(gamesHolder, gameType) {
         //console.log(content);
         let gameLink = games[i].link;
         //console.log(gameLink);
-        if (gameLink.length > 0 && !games[i].hidden) {
+        if (gameLink.length > 0) {
             //console.log(gameLink);
             let gameImage = games[i].image;
             if (gameImage == "") {
@@ -201,7 +201,7 @@ function SetGames(gamesHolder, gameType) {
 
             }
 
-            if (gameType == 'any' || games[i].type.includes(gameType)) {
+            if ((gameType == 'any' || games[i].type.includes(gameType)) && !games[i].hidden) {
                 let itemTypes = games[i].type;
                 let contentTmp = "";
 
