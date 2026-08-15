@@ -112,7 +112,7 @@ var games = {
         "hidden": false
     },
     14: {
-        "name": "Azem",
+        "name": "AZEM",
         "type": ["itch"],
         "link": ["https://jayden-holliss.itch.io/azem"],
         "image": "",
