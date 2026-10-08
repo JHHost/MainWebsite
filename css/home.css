@@ -576,10 +576,10 @@ ul {
 }
 
 .imageViewHolder img {
-    min-width: fit-content;
+    min-width: 90vw;
     width: fit-content;
     max-width: 90vw;
     min-height: fit-content;
-    height: 95vh;
+    height: fit-content;;
     max-height: 95vh;
 }
